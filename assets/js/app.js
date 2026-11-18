@@ -39,6 +39,8 @@
     document.getElementById("hero-tagline").textContent = profile.tagline;
     document.getElementById("hero-availability").textContent = profile.availability;
     document.getElementById("hero-github-link").href = profile.githubUrl;
+    const heroLinkedin = document.getElementById("hero-linkedin-link");
+    if (heroLinkedin) heroLinkedin.href = profile.linkedinUrl;
     document.getElementById("footer-year").textContent = new Date().getFullYear();
     document.getElementById("footer-name").textContent = profile.name;
 
@@ -69,6 +71,7 @@
     });
 
     // Encabezado de impresión PDF
+    const linkedinDisplay = profile.linkedinUrl.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
     document.getElementById("print-name").textContent = profile.name;
     document.getElementById("print-role").textContent = profile.role;
     document.getElementById("print-summary").textContent = profile.tagline;
@@ -77,6 +80,7 @@
       <div>${profile.location}</div>
       <div>${profile.email}</div>
       <div>github.com/${profile.githubUsername}</div>
+      <div>${linkedinDisplay}</div>
     `;
 
     // Enlaces de Contacto
@@ -84,7 +88,7 @@
     const channels = [
       { label: "Correo Electrónico", value: profile.email, href: `mailto:${profile.email}` },
       { label: "GitHub", value: `@${profile.githubUsername}`, href: profile.githubUrl },
-      { label: "LinkedIn", value: "Perfil Profesional", href: profile.linkedinUrl }
+      { label: "LinkedIn", value: linkedinDisplay, href: profile.linkedinUrl }
     ];
     channels.forEach((c) => {
       const a = el("a", "contact-link-item");
@@ -134,7 +138,7 @@
           printLine("Motor DSP: FFT Radix-2, Ventanas Hann/Blackman, SNR, THD, Filtros FIR.", "term-ok");
           break;
         case "contact":
-          printLine(`Email: ${profile.email} | GitHub: ${profile.githubUrl}`, "term-ok");
+          printLine(`Email: ${profile.email} | GitHub: ${profile.githubUrl} | LinkedIn: ${profile.linkedinUrl}`, "term-ok");
           break;
         case "clear":
           output.innerHTML = "";
