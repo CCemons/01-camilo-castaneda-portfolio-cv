@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio y Currículum Vitae de Camilo Castañeda — Ingeniería Electrónica, Sistemas Embebidos (Arduino, ESP32, Raspberry Pi), DSP/RF y Desarrollo Web." />
+  <title>Camilo Castañeda | Portafolio &amp; Currículum Vitae</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Barra de navegación principal -->
+  <header class="navbar no-print" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Inicio">
+        <span class="brand-badge" id="brand-initials">CC</span>
+        <span class="brand-text">Camilo<span class="accent">.dev</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#sobre-mi">Perfil</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Trayectoria</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="theme-toggle" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <button class="btn btn-primary btn-sm" id="print-cv-btn" title="Imprimir o guardar como PDF">
+          ⬇ Guardar CV (PDF)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Encabezado exclusivo para versión impresa (CV en PDF) -->
+  <section class="print-only print-header">
+    <div class="print-header-main">
+      <h1 id="print-name">Camilo Castañeda</h1>
+      <p class="print-role" id="print-role"></p>
+      <p class="print-summary" id="print-summary"></p>
+    </div>
+    <div class="print-contact-info" id="print-contact-info"></div>
+  </section>
+
+  <main>
+    <!-- Hero / Presentación -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill no-print">
+            <span class="pulse-dot"></span>
+            <span id="hero-availability">Disponible para proyectos y oportunidades</span>
+          </div>
+          <h1 class="hero-title">
+            Hola, soy <span class="gradient-text" id="hero-name">Camilo Castañeda</span>
+          </h1>
+          <p class="hero-role" id="hero-role"></p>
+          <p class="hero-tagline" id="hero-tagline"></p>
+
+          <div class="hero-cta no-print">
+            <a href="#proyectos" class="btn btn-primary">Explorar Proyectos</a>
+            <a href="#contacto" class="btn btn-outline">Contactar</a>
+            <a href="#" id="hero-github-link" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+          <div class="hero-stats" id="hero-stats"></div>
+        </div>
+
+        <!-- Terminal Interactiva de Hardware & Software -->
+        <div class="hero-terminal no-print" aria-label="Terminal interactiva de perfil">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">camilo@rpi-edge-hub:~/portfolio</span>
+          </div>
+          <div class="terminal-body" id="terminal-output"></div>
+          <div class="terminal-quick-cmds">
+            <span>Comandos rápidos:</span>
+            <button type="button" class="cmd-chip" data-cmd="help">help</button>
+            <button type="button" class="cmd-chip" data-cmd="hardware">hardware</button>
+            <button type="button" class="cmd-chip" data-cmd="projects">projects</button>
+            <button type="button" class="cmd-chip" data-cmd="dsp">dsp</button>
+            <button type="button" class="cmd-chip" data-cmd="clear">clear</button>
+          </div>
+          <form class="terminal-input-row" id="terminal-form">
+            <span class="prompt">$</span>
+            <input
+              type="text"
+              id="terminal-input"
+              placeholder="Escribe un comando (ej. help, hardware, projects)..."
+              autocomplete="off"
+              aria-label="Comando de terminal"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfil / Sobre Mí -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">01 · Perfil Profesional</span>
+          <h2>Sobre Mí &amp; Enfoque de Ingeniería</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-card" id="about-paragraphs"></div>
+          <div class="card highlights-card">
+            <h3>Resumen Técnico</h3>
+            <ul class="highlights-list" id="highlights-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section class="section section-alt" id="habilidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">02 · Stack Tecnológico</span>
+          <h2>Habilidades &amp; Competencias</h2>
+          <p class="section-subtitle">
+            Dominio práctico desde la capa física y electrónica hasta la interfaz web en la nube.
+          </p>
+        </div>
+
+        <div class="filter-bar no-print" id="skill-filters" role="tablist" aria-label="Filtrar habilidades"></div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Experiencia, Educación & Certificaciones -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">03 · Currículum Vitae</span>
+          <h2>Trayectoria, Formación &amp; Certificaciones</h2>
+        </div>
+
+        <div class="cv-layout">
+          <div class="timeline" id="timeline-container"></div>
+
+          <aside class="certs-column">
+            <h3 class="subsection-title">Formación Complementaria &amp; Áreas Clave</h3>
+            <div class="certs-grid" id="certs-container"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="section section-alt" id="proyectos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">04 · Portafolio GitHub</span>
+          <h2>Proyectos de Ingeniería &amp; Software</h2>
+          <p class="section-subtitle">
+            Repositorios documentados con código modular, simuladores y arquitecturas listas para producción.
+          </p>
+        </div>
+
+        <div class="projects-toolbar no-print">
+          <div class="filter-bar" id="project-filters" role="tablist" aria-label="Filtrar proyectos"></div>
+          <div class="search-box">
+            <input
+              type="search"
+              id="project-search"
+              placeholder="Buscar por tecnología (Arduino, Python, FFT, GPIO...)"
+              aria-label="Buscar proyectos"
+            />
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section no-print" id="contacto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">05 · Conectemos</span>
+          <h2>Contacto Directo</h2>
+          <p class="section-subtitle">
+            ¿Buscas colaborar en un proyecto de IoT, automatización, sistemas embebidos o desarrollo web?
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-info-card">
+            <h3>Canales Oficiales</h3>
+            <p>Puedes escribirme directamente o revisar el código fuente de mis repositorios.</p>
+            <div class="contact-links" id="contact-links"></div>
+          </div>
+
+          <form class="card contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Tu Nombre</label>
+                <input type="text" id="contact-name" required placeholder="Ej. Laura Gómez" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Correo Electrónico</label>
+                <input type="email" id="contact-email" required placeholder="nombre@empresa.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Asunto</label>
+              <input type="text" id="contact-subject" required placeholder="Proyecto IoT / Oportunidad Laboral" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Mensaje</label>
+              <textarea id="contact-message" rows="4" required placeholder="Cuéntame sobre el proyecto o reto técnico..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Abrir en Correo (mailto)</button>
+              <button type="button" class="btn btn-outline" id="copy-email-btn">Copiar Correo</button>
+            </div>
+            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer no-print">
+    <div class="container footer-inner">
+      <p>© <span id="footer-year"></span> <strong id="footer-name">Camilo Castañeda</strong> · Portafolio Open Source.</p>
+      <p class="footer-note">Construido con HTML5, CSS3 y JavaScript puro · Listo para GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Modal de detalle y simulador interactivo del proyecto -->
+  <div class="modal-backdrop no-print" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="project-badge" id="modal-category"></span>
+          <h3 id="modal-title"></h3>
+        </div>
+        <button type="button" class="btn-icon" id="modal-close" aria-label="Cerrar modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-summary" class="modal-summary"></p>
+
+        <div class="modal-arch-box">
+          <strong>Arquitectura del Sistema:</strong>
+          <p id="modal-architecture"></p>
+        </div>
+
+        <div class="modal-sim-box">
+          <div class="modal-sim-header">
+            <strong id="modal-sim-title">Simulación Interactiva en Vivo</strong>
+            <span class="sim-badge">Preview</span>
+          </div>
+          <canvas id="modal-canvas" width="620" height="190"></canvas>
+          <pre id="modal-console" class="modal-console"></pre>
+        </div>
+
+        <div class="modal-metrics">
+          <h4>Aspectos Destacados</h4>
+          <ul id="modal-metrics-list"></ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="modal-repo-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Ver Repositorio en GitHub ↗
+        </a>
+        <a href="#" id="modal-local-link" class="btn btn-outline">
+          Abrir Archivo Local
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificación Toast -->
+  <div class="toast no-print" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/portfolio-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
