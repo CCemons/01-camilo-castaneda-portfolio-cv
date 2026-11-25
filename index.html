@@ -12,22 +12,21 @@
       }
     } catch {}
   </script>
-  <title>Camilo Andrés Castañeda Polo — Ingeniero Electrónico, Embebidos, RF/SDR &amp; Software</title>
+  <title>Camilo Andrés Castañeda Polo — Monografía de Ingeniería Electrónica &amp; Software</title>
   <meta
     name="description"
-    content="Portafolio de ingeniería y Hoja de Vida de Camilo Andrés Castañeda Polo: Sistemas Embebidos (ESP32, FreeRTOS, Raspberry Pi), RF/SDR (ADALM-Pluto+), DSP en Python, SCADA Web, Kotlin Android e Inglés C1."
+    content="Expediente técnico y Hoja de Vida de Camilo Andrés Castañeda Polo: Ingeniería Electrónica (USCO), Sistemas Embebidos ESP32/FreeRTOS, RF/SDR ADALM-Pluto+, Edge IoT Docker, SCADA Web, Kotlin Android e Inglés C1."
   />
-  <meta property="og:title" content="Camilo Andrés Castañeda Polo — Portafolio &amp; Hoja de Vida" />
+  <meta property="og:title" content="Camilo Andrés Castañeda Polo — Expediente de Ingeniería" />
   <meta
     property="og:description"
-    content="Ingeniero Electrónico (Candidato a Grado · USCO). Hardware PCB/CNC, ESP32 RTOS, RF 2.4 GHz &amp; ADALM-Pluto+ SDR, Edge IoT Docker, SCADA Web y Android Kotlin."
+    content="Hardware KiCad/CNC, firmware FreeRTOS, banco SDR ADALM-Pluto+, plataformas Raspberry Pi Edge, SCADA Web, DSP en Python y Android Kotlin."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ccemons.github.io/01-camilo-castaneda-portfolio-cv/" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="modulepreload" href="assets/js/main.js" />
   <link rel="modulepreload" href="assets/js/cv-data.js" />
-  <link rel="modulepreload" href="assets/js/simulators.js" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script type="application/ld+json">
     {
@@ -58,350 +57,415 @@
 <body>
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
-  <header class="site-header no-print">
-    <div class="container nav-inner">
-      <a href="#inicio" class="brand">
-        <span class="brand-badge" aria-hidden="true">CC</span>
-        <span class="brand-name">Camilo Castañeda</span>
-      </a>
-
-      <button
-        type="button"
-        class="btn-icon nav-toggle"
-        id="nav-toggle"
-        aria-label="Abrir menú de navegación"
-        aria-expanded="false"
-        aria-controls="nav-links"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
-        </svg>
-      </button>
-
-      <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
-        <a href="#trabajo-grado">Trabajo de Grado</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#competencias">Competencias</a>
-        <a href="#trayectoria">Trayectoria</a>
-        <a href="#certificaciones">Certificaciones</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Cambiar tema de color">
-          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/>
-          </svg>
-          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  <!-- Cabezote Editorial Técnico -->
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <div class="masthead-id">
+        <span class="masthead-code">EXPEDIENTE DE INGENIERÍA · CC-2026</span>
+        <span>NEIVA, HUILA · COLOMBIA</span>
+        <span>SNIES 3204 · USCO</span>
+      </div>
+      <div class="masthead-actions no-print">
+        <button type="button" class="ctrl-btn" id="theme-toggle">
+          <span class="theme-label-dark">Cambiar a Carbón</span>
+          <span class="theme-label-light">Cambiar a Marfil</span>
         </button>
-
-        <button type="button" class="btn btn-primary btn-sm" id="print-cv-btn">
-          Guardar CV (PDF)
+        <button type="button" class="ctrl-btn is-solid" id="print-cv-btn">
+          Exportar Hoja de Vida (PDF)
         </button>
       </div>
     </div>
   </header>
 
-  <main id="contenido-principal">
-    <!-- Hero Principal (LCP inmediato en HTML) -->
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <div class="availability-pill">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            <span>Disponibilidad inmediata · Presencial, híbrido o remoto · Traslado nacional/internacional</span>
-          </div>
-
-          <h1 class="hero-title">Camilo Andrés Castañeda Polo</h1>
-          <p class="hero-role">Ingeniero Electrónico (Candidato a Grado · Inicios 2027)</p>
-          <p class="hero-specialty">Sistemas Embebidos · RF / SDR · Control e Instrumentación · IA &amp; Software</p>
-          <p class="hero-summary">
-            Desarrollo de punta a punta entre hardware y código: diseño de PCB en KiCad fresadas en CNC, firmware
-            multinúcleo ESP32/FreeRTOS, bancos SDR con ADALM-Pluto+ y Python, plataformas Edge en Raspberry Pi con
-            Docker, centros SCADA Web, aplicaciones Android en Kotlin e inglés técnico avanzado (C1 / P97 Saber Pro).
-          </p>
-
-          <div class="hero-actions no-print">
-            <a href="#proyectos" class="btn btn-primary">Explorar 7 Proyectos</a>
-            <a href="#contacto" class="btn btn-outline">Contactar</a>
-            <a href="https://github.com/CCemons" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              GitHub (@CCemons)
-            </a>
-            <a href="https://www.linkedin.com/in/camilocastanedapolo/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              LinkedIn
-            </a>
-          </div>
-
-          <div class="kpi-grid" aria-label="Indicadores destacados">
-            <div class="kpi-card">
-              <span class="kpi-value">Inglés MCER C1</span>
-              <span class="kpi-label">67/100 EF SET · Reading C2 (97) · Listening C2 (74)</span>
-            </div>
-            <div class="kpi-card">
-              <span class="kpi-value">Saber Pro Top 15%</span>
-              <span class="kpi-label">P97 Inglés · P92 Cuant. · P90 Ciud. · Saber 11 P100</span>
-            </div>
-            <div class="kpi-card">
-              <span class="kpi-value">7 Proyectos GitHub</span>
-              <span class="kpi-label">RF/SDR, ESP32, RPi Docker, SCADA, DSP y Kotlin</span>
-            </div>
-            <div class="kpi-card">
-              <span class="kpi-value">21 Certificaciones</span>
-              <span class="kpi-label">8 MathWorks · 5 LinkedIn Learning · 8 SENA</span>
-            </div>
-          </div>
+  <!-- Portada Editorial Asimétrica -->
+  <section class="monograph-hero" id="inicio">
+    <div class="frame hero-grid">
+      <div class="hero-lead">
+        <span class="kicker">Ingeniería Electrónica · Candidato a Grado Inicios 2027</span>
+        <h1>Camilo Andrés Castañeda Polo</h1>
+        <p class="hero-subtitle">Sistemas Embebidos · RF &amp; SDR · Control e Instrumentación · Software &amp; IA</p>
+        <p class="hero-editorial-copy">
+          Ingeniero Electrónico en cierre de pregrado con enfoque práctico de ciclo completo entre hardware y código:
+          diseño de tarjetas impresas en KiCad fresadas en CNC, firmware multinúcleo en tiempo real (ESP32/FreeRTOS),
+          evaluación espectral y bancos SDR (ADALM-Pluto+ en Python), plataformas Edge en Raspberry Pi con Docker,
+          centros SCADA Web y aplicaciones móviles nativas en Kotlin.
+        </p>
+        <div class="hero-links">
+          <a href="https://github.com/CCemons" target="_blank" rel="noopener noreferrer">GitHub @CCemons &#8599;</a>
+          <a href="https://www.linkedin.com/in/camilocastanedapolo/" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a>
+          <a href="mailto:camilomilo3000@gmail.com">camilomilo3000@gmail.com</a>
+          <a href="tel:+573046435801">+57 304 643 5801</a>
         </div>
-
-        <aside class="hero-aside" aria-label="Ficha de identidad y consola de laboratorio">
-          <div class="identity-card">
-            <div class="portrait-frame">
-              <img
-                class="portrait-img"
-                src="assets/img/camilo-castaneda.jpg"
-                alt="Retrato profesional de Camilo Andrés Castañeda Polo, Ingeniero Electrónico"
-                width="224"
-                height="256"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </div>
-            <div class="identity-meta">
-              <h2>Neiva, Huila, Colombia</h2>
-              <ul class="identity-list">
-                <li><strong>Tel:</strong> <a href="tel:+573046435801">+57 304 643 5801</a></li>
-                <li><strong>Correo:</strong> <a href="mailto:camilomilo3000@gmail.com">camilomilo3000@gmail.com</a></li>
-                <li><strong>Movilidad:</strong> Licencias A2 y B1 (vig. 2031)</li>
-                <li><strong>Universidad:</strong> USCO · SNIES 3204</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="lab-console no-print" aria-label="Consola interactiva de perfil técnico">
-            <div class="console-header">
-              <div class="console-dots" aria-hidden="true">
-                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-              </div>
-              <span>camilo@usco-rf-lab:~/cv</span>
-            </div>
-            <div class="console-output" id="lab-console-output" aria-live="polite"></div>
-            <div class="console-chips">
-              <button type="button" class="cmd-chip" data-cmd="help">help</button>
-              <button type="button" class="cmd-chip" data-cmd="thesis">thesis</button>
-              <button type="button" class="cmd-chip" data-cmd="sdr">sdr</button>
-              <button type="button" class="cmd-chip" data-cmd="saberpro">saberpro</button>
-              <button type="button" class="cmd-chip" data-cmd="projects">projects</button>
-              <button type="button" class="cmd-chip" data-cmd="clear">clear</button>
-            </div>
-            <form class="console-form" id="lab-console-form">
-              <label for="lab-console-input" class="visually-hidden">Comando para la consola interactiva</label>
-              <span class="console-prompt" aria-hidden="true">$</span>
-              <input
-                type="text"
-                id="lab-console-input"
-                placeholder="Escribe un comando (help, thesis, sdr, certs)..."
-                autocomplete="off"
-              />
-            </form>
-          </div>
-        </aside>
       </div>
-    </section>
 
-    <!-- Proyecto Insignia: Trabajo de Grado -->
-    <section class="section section-alt" id="trabajo-grado">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">01 · Proyecto Insignia — Trabajo de Grado (2026)</span>
-          <h2>Generador RF Controlado en 2.4 GHz &amp; Banco SDR (JammerUsco)</h2>
-          <p class="section-subtitle">
-            Universidad Surcolombiana (USCO) · Laboratorio de Líneas y Antenas · Dir.: Ing. Martín Diómedes Bravo Obando.
-            Hardware, firmware FreeRTOS, banco SDR en Python, validación espectral y manufactura CNC/3D.
+      <aside class="hero-dossier" aria-label="Ficha de identidad y movilidad">
+        <div class="portrait-plate">
+          <img
+            src="assets/img/camilo-castaneda.jpg"
+            alt="Retrato profesional de Camilo Andrés Castañeda Polo, Ingeniero Electrónico"
+            width="224"
+            height="256"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <ul class="spec-readout">
+          <li>
+            <span class="spec-key">Ubicación</span>
+            <span class="spec-val">Neiva, Huila · Colombia</span>
+          </li>
+          <li>
+            <span class="spec-key">Disponibilidad</span>
+            <span class="spec-val">Inmediata · Presencial, híbrida o remota</span>
+          </li>
+          <li>
+            <span class="spec-key">Traslado</span>
+            <span class="spec-val">Viajes técnicos y traslado nacional / internacional</span>
+          </li>
+          <li>
+            <span class="spec-key">Movilidad</span>
+            <span class="spec-val">Licencias A2 y B1 vigentes (hasta 2031)</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="hero-strip">
+      <div class="frame strip-grid">
+        <div class="strip-cell">
+          <span class="strip-num">Inglés MCER C1 (67/100)</span>
+          <span class="strip-desc">EF SET: Reading C2 (97) · Listening C2 (74)</span>
+        </div>
+        <div class="strip-cell">
+          <span class="strip-num">Saber Pro Top 15 % Nac.</span>
+          <span class="strip-desc">P97 Inglés · P92 Cuantitativo · Saber 11 P100</span>
+        </div>
+        <div class="strip-cell">
+          <span class="strip-num">7 Sistemas Open Source</span>
+          <span class="strip-desc">RF/SDR, ESP32, RPi Docker, SCADA, DSP, Kotlin</span>
+        </div>
+        <div class="strip-cell">
+          <span class="strip-num">21 Certificaciones</span>
+          <span class="strip-desc">8 MathWorks · 5 LinkedIn Learning · 8 SENA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuerpo Suizo 3 : 9 con Índice Lateral Scrollspy -->
+  <div class="frame sheet-grid">
+    <aside class="index-rail no-print" aria-label="Índice del expediente">
+      <p class="rail-heading">Índice Técnico</p>
+      <nav class="index-rail-nav" aria-label="Secciones del expediente">
+        <a href="#tesis-rf">I. Tesis RF &amp; Banco SDR</a>
+        <a href="#sistemas">II. Sistemas &amp; Repositorios</a>
+        <a href="#dominios">III. Dominios Técnicos</a>
+        <a href="#trayectoria">IV. Formación &amp; Experiencia</a>
+        <a href="#credenciales">V. Pruebas &amp; Certificaciones</a>
+        <a href="#contacto">VI. Contacto Directo</a>
+      </nav>
+    </aside>
+
+    <main id="contenido-principal" class="editorial-stream">
+      <!-- I. Caso de Estudio: Trabajo de Grado -->
+      <section class="mono-section" id="tesis-rf" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección I · Trabajo de Grado (2026)</span>
+          <h2>Prototipo Generador de Interferencia RF Controlada en 2.4 GHz y Banco SDR (JammerUsco)</h2>
+          <p class="section-lead">
+            Universidad Surcolombiana (USCO) · Laboratorio de Líneas y Antenas · Director: Ing. Martín Diómedes Bravo Obando · Neiva, Huila.
           </p>
         </div>
 
-        <div class="thesis-grid">
-          <div class="thesis-card">
-            <div class="thesis-mode-bar no-print" role="group" aria-label="Modos de operación RF">
-              <button type="button" class="mode-btn is-active" data-thesis-mode="spot" aria-pressed="true">Spot / Tone</button>
-              <button type="button" class="mode-btn" data-thesis-mode="sweep" aria-pressed="false">Sweep / Chirp</button>
-              <button type="button" class="mode-btn" data-thesis-mode="random" aria-pressed="false">Random</button>
-              <button type="button" class="mode-btn" data-thesis-mode="barrage" aria-pressed="false">Barrage 22 MHz</button>
-            </div>
+        <div class="diagram-plate">
+          <p class="diagram-caption">Diagrama de Bloques de Arquitectura Física, RF y Demodulación SDR</p>
+          <div class="svg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable de arquitectura JammerUsco">
+            <svg class="arch-svg" viewBox="0 0 920 220" role="img" aria-label="Diagrama de bloques: ESP32 Dual-Core controla doble nRF24L01 y etapa RF de 2 W, enlace de 5 metros caracterizado con Aaronia SPECTRAN hacia ADALM-Pluto+ y procesamiento DSP en Python">
+            <rect x="8" y="20" width="164" height="86" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="18" y="42" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">1. ESP32 DUAL-CORE</text>
+            <text x="18" y="60" font-family="sans-serif" font-size="11" fill="currentColor">Core 0: HSPI/VSPI 16 MHz</text>
+            <text x="18" y="76" font-family="sans-serif" font-size="11" fill="currentColor">radioMutex · Core 1: FSM</text>
+            <text x="18" y="92" font-family="sans-serif" font-size="11" fill="currentColor">OLED SSD1306 · CLI 115k2</text>
 
-            <h3 id="thesis-mode-title">Spot / Tone</h3>
-            <p id="thesis-mode-desc"></p>
+            <rect x="8" y="124" width="164" height="72" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <text x="18" y="146" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">ALIMENTACIÓN &amp; PCB</text>
+            <text x="18" y="164" font-family="sans-serif" font-size="11" fill="currentColor">12 V -> LM2596 -> 2x LDO</text>
+            <text x="18" y="180" font-family="sans-serif" font-size="11" fill="currentColor">KiCad 10 · CNC G31 335 pts</text>
 
-            <div class="thesis-specs">
-              <div><strong>Banda:</strong> <span id="thesis-mode-freq"></span></div>
-              <div><strong>Etapa RF:</strong> <span id="thesis-mode-power"></span></div>
-              <div><strong>Arquitectura Bus:</strong> <span id="thesis-mode-bus"></span></div>
-            </div>
+            <line x1="172" y1="63" x2="208" y2="63" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="208,59 216,63 208,67" fill="currentColor"/>
 
-            <div class="thesis-metrics-grid" id="thesis-mode-metrics"></div>
+            <rect x="216" y="20" width="174" height="86" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="226" y="42" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">2. ETAPA RF 2.4 GHz</text>
+            <text x="226" y="60" font-family="sans-serif" font-size="11" fill="currentColor">2x nRF24L01+PA+LNA</text>
+            <text x="226" y="76" font-family="sans-serif" font-size="11" fill="currentColor">PA SBB5089 + SZP2026</text>
+            <text x="226" y="92" font-family="sans-serif" font-size="11" font-weight="700" fill="var(--copper)">Salida: 2 W / 33.5 dBm</text>
 
-            <ul class="bullet-list">
-              <li><strong>Firmware Dual-Core (ESP32 / FreeRTOS / PlatformIO):</strong> Núcleo 0 dedicado en microsegundos sobre HSPI/VSPI a 16 MHz protegidos por <code>radioMutex</code>; Núcleo 1 con FSM, OLED SSD1306 (I2C) y consola CLI UART a 115200 bps.</li>
-              <li><strong>Banco SDR ADALM-Pluto+ (AD9363 + FPGA Zynq-7000):</strong> Captura DMA de 150.000 muestras I/Q con <code>pyadi-iio</code>/<code>libiio</code>, filtro RRC (α = 0.35), Lazo de Costas y medición BER/PER a 5 m (FSPL = 54.20 dB) en BPSK, QPSK, 16-QAM, GFSK y FHSS.</li>
-              <li><strong>ECAD, MCAD y Manufactura:</strong> KiCad 10.0 (12 V → Buck LM2596 → doble LDO AMS1117-3.3V aislado), CNC 6040 con malla G31 de 335 pts (734.4 µm), gabinete STEP en Fusion 360 (FDM) y BOM de $396.500 COP.</li>
+            <line x1="390" y1="63" x2="426" y2="63" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="426,59 434,63 426,67" fill="currentColor"/>
+
+            <rect x="434" y="20" width="164" height="86" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="444" y="42" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">3. CANAL &amp; ESPECTRO</text>
+            <text x="444" y="60" font-family="sans-serif" font-size="11" fill="currentColor">Enlace 5 m (FSPL 54.2 dB)</text>
+            <text x="444" y="76" font-family="sans-serif" font-size="11" fill="currentColor">Antenas 2 / 5 / 8 dBi</text>
+            <text x="444" y="92" font-family="sans-serif" font-size="11" fill="currentColor">Aaronia SPECTRAN 60105X</text>
+
+            <line x1="598" y1="63" x2="634" y2="63" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="634,59 642,63 634,67" fill="currentColor"/>
+
+            <rect x="642" y="20" width="270" height="86" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="652" y="42" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">4. BANCO SDR (ADALM-PLUTO+ &amp; DSP)</text>
+            <text x="652" y="60" font-family="sans-serif" font-size="11" fill="currentColor">AD9363 + FPGA Zynq-7000 · DMA 150k I/Q</text>
+            <text x="652" y="76" font-family="sans-serif" font-size="11" fill="currentColor">pyadi-iio / libiio / NumPy / SciPy</text>
+            <text x="652" y="92" font-family="sans-serif" font-size="11" fill="currentColor">RRC α=0.35 · Costas · AGC · BER / PER</text>
+
+            <rect x="216" y="124" width="696" height="72" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <text x="228" y="146" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">VALIDACIÓN REGULATORIA, MCAD Y COSTOS</text>
+            <text x="228" y="164" font-family="sans-serif" font-size="11" fill="currentColor">Modulaciones evaluadas: BPSK, QPSK, 16-QAM, GFSK y FHSS | Mecanizado CNC 6040 (734.4 µm compensados)</text>
+            <text x="228" y="180" font-family="sans-serif" font-size="11" fill="currentColor">Gabinete STEP en Fusion 360 (FDM) | ANE Res. 105/2020 &amp; MinTIC Res. 002774/2013 | BOM: $396.500 COP</text>
+          </svg>
+          </div>
+        </div>
+
+        <div class="thesis-columns">
+          <div>
+            <ul class="spec-list">
+              <li>
+                <strong>Firmware Multinúcleo en Tiempo Real (ESP32 / C++ / FreeRTOS / PlatformIO):</strong> Núcleo 0
+                dedicado a la conmutación en microsegundos de dos transceptores <code>nRF24L01+PA+LNA</code> sobre
+                buses HSPI/VSPI a 16 MHz protegidos con <code>radioMutex</code> y radios nativos desactivados; Núcleo 1
+                con máquina de estados (FSM), OLED SSD1306 (I2C), botonera y CLI UART a 115200 bps.
+              </li>
+              <li>
+                <strong>Banco SDR y DSP en Python (ADALM-Pluto+):</strong> Programación directa sobre AD9363 + FPGA
+                Xilinx Zynq-7000 con <code>pyadi-iio</code>, <code>libiio</code>, NumPy y SciPy (captura DMA de 150.000
+                muestras I/Q) implementando demodulación coherente (RRC α = 0.35, correlación FFT, Lazo de Costas, AGC)
+                y no coherente (discriminador diferencial + corrección CFO) para medir BER/PER a 5 m (FSPL = 54.20 dB).
+              </li>
+              <li>
+                <strong>Diseño ECAD/MCAD y Manufactura Digital:</strong> PCB monocara en KiCad 10.0, fresado en CNC 6040
+                (FlatCAM/Mach3) con malla G31 de 335 puntos (734.4 µm compensados), gabinete STEP en Fusion 360 e
+                impresión 3D FDM con BOM de $396.500 COP.
+              </li>
             </ul>
-          </div>
-
-          <div class="thesis-sim-panel no-print">
-            <h3>Simulación Espectral en Tiempo Real (2400 – 2525 MHz)</h3>
-            <p class="section-subtitle" style="margin-bottom: 12px;">
-              Previsualización interactiva de la envolvente espectral según el modo activo en el Núcleo 0 del ESP32.
-            </p>
-            <div class="canvas-box">
-              <canvas id="thesis-canvas" width="560" height="230" aria-label="Espectro RF simulado en banda de 2.4 GHz"></canvas>
-            </div>
-            <pre class="readout-bar" id="thesis-canvas-readout" aria-live="off"></pre>
-            <div style="margin-top: 14px;">
-              <a href="https://github.com/CCemons/JammerUsco" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                Ver Repositorio JammerUsco en GitHub
+            <p style="margin-top: 16px;">
+              <a href="https://github.com/CCemons/JammerUsco" target="_blank" rel="noopener noreferrer" class="ctrl-btn">
+                Ver Repositorio JammerUsco en GitHub &#8599;
               </a>
+            </p>
+          </div>
+
+          <div class="mode-table-wrap">
+            <table class="data-table">
+              <caption>Modos de Operación Implementados en Banda ISM 2.4 GHz</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Modo</th>
+                  <th scope="col">Cobertura</th>
+                  <th scope="col">Objetivo de Evaluación SDR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Spot / Tone</th>
+                  <td>Canal fijo (ej. 2437 MHz)</td>
+                  <td>Bloqueo concentrado de portadora y degradación SNR</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sweep / Chirp</th>
+                  <td>2400–2525 MHz bidireccional</td>
+                  <td>Barrido sobre los 126 canales ISM 2.4 GHz</td>
+                </tr>
+                <tr>
+                  <th scope="row">Random</th>
+                  <td>2400–2525 MHz pseudoaleatorio</td>
+                  <td>Contraste de resiliencia frente a FHSS y GFSK</td>
+                </tr>
+                <tr>
+                  <th scope="row">Barrage</th>
+                  <td>22 MHz continuos (Wi-Fi)</td>
+                  <td>Medición de BER/PER en BPSK, QPSK y 16-QAM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- II. Expediente Lineal de Sistemas & Repositorios -->
+      <section class="mono-section" id="sistemas" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección II · Portafolio en GitHub (CCemons)</span>
+          <h2>Sistemas de Ingeniería y Desarrollo Tecnológico</h2>
+          <p class="section-lead">
+            Cada registro presenta su resumen operativo y un desplegable técnico con el diagrama de flujo de arquitectura
+            y especificaciones verificadas.
+          </p>
+        </div>
+
+        <div class="dossier-controls no-print">
+          <div class="filter-strip" id="system-filters" role="group" aria-label="Filtrar sistemas por categoría"></div>
+          <button
+            type="button"
+            class="ctrl-btn"
+            id="toggle-all-systems"
+            commandfor="systems-accordion-group"
+            command="--toggle-all"
+            aria-expanded="false"
+          >
+            <span class="label-expand">Expandir especificaciones</span>
+            <span class="label-collapse">Contraer todo</span>
+          </button>
+        </div>
+
+        <div class="systems-ledger" id="systems-accordion-group"></div>
+      </section>
+
+      <!-- III. Dominios Técnicos 2x2 -->
+      <section class="mono-section" id="dominios" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección III · Matriz de Capacidades</span>
+          <h2>Dominios Técnicos Multidisciplinarios</h2>
+        </div>
+
+        <div class="domains-grid" id="domains-grid"></div>
+      </section>
+
+      <!-- IV. Formación y Experiencia -->
+      <section class="mono-section" id="trayectoria" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección IV · Historial Académico y Corporativo</span>
+          <h2>Formación, Experiencia Laboral y Voluntariado</h2>
+        </div>
+
+        <div class="ledger-group">
+          <article class="ledger-row">
+            <div class="ledger-date">Jun. 2020 – Actualidad</div>
+            <div class="ledger-content">
+              <h3>Ingeniería Electrónica (Último semestre · Candidato a Grado: Inicios de 2027)</h3>
+              <p class="ledger-org">Universidad Surcolombiana (USCO) · Neiva, Huila · Registro SNIES 3204</p>
+              <p>
+                Trabajo de grado experimental en hardware RF y Radio Definida por Software. Profundización en Sistemas
+                Embebidos, Control Digital, Adaptativo y Predictivo, Instrumentación Industrial, SDR, Procesamiento Digital
+                de Señales, Visión por Computador, Telemetría Eléctrica, Redes de Datos, SIG y Aplicaciones Móviles.
+              </p>
             </div>
-          </div>
+          </article>
+
+          <article class="ledger-row">
+            <div class="ledger-date">Jun. 2017 – Nov. 2017</div>
+            <div class="ledger-content">
+              <h3>Auxiliar Contable (Contrato de Aprendizaje / Etapa Práctica SENA – 880 horas)</h3>
+              <p class="ledger-org">ORF S.A. – Organización Roa Florhuila · Neiva, Huila (Presencial · 6 meses)</p>
+              <p>
+                Causación de facturación y validación de soportes bajo normativa tributaria vigente en el sistema
+                empresarial ERP DMS y Microsoft Excel; conciliaciones bancarias, cruce de cuentas y estandarización
+                documental para auditorías internas/externas y reportes corporativos.
+              </p>
+            </div>
+          </article>
+
+          <article class="ledger-row">
+            <div class="ledger-date">Ene. 2016 – Nov. 2017</div>
+            <div class="ledger-content">
+              <h3>Técnico en Contabilización de Operaciones Comerciales y Financieras</h3>
+              <p class="ledger-org">Servicio Nacional de Aprendizaje (SENA) – Regional Huila · Reg. No. 34078916</p>
+              <p>
+                Programa integral de 1.945 horas (1.065 h lectivas en contabilidad, inventarios de equipos/materiales e
+                inglés técnico + 880 h de práctica empresarial), articulado con el título de Bachiller Técnico Comercial
+                en la I.E. Atanasio Girardot (1.200 h, Neiva, Dic. 2017).
+              </p>
+            </div>
+          </article>
+
+          <article class="ledger-row">
+            <div class="ledger-date">Nov. 2016</div>
+            <div class="ledger-content">
+              <h3>Voluntariado — Servicio Social y Proyección Comunitaria (80 horas certificadas)</h3>
+              <p class="ledger-org">Cruz Roja Colombiana · Seccional Huila · Neiva</p>
+              <p>
+                Apoyo certificado en talleres de formación, capacitación juvenil y jornadas de proyección comunitaria.
+              </p>
+            </div>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Portafolio de 7 Proyectos -->
-    <section class="section" id="proyectos">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">02 · Portafolio en GitHub (CCemons)</span>
-          <h2>Proyectos de Ingeniería y Desarrollo Tecnológico</h2>
-          <p class="section-subtitle">
-            Siete soluciones reales documentadas en GitHub que conectan hardware físico, sistemas Linux embebidos,
-            procesamiento digital de señales, tableros SCADA y aplicaciones móviles nativas.
-          </p>
-        </div>
-
-        <div class="toolbar no-print">
-          <div class="filter-group" id="project-filters" role="group" aria-label="Filtrar proyectos por área"></div>
-          <div class="search-wrap">
-            <label for="project-search" class="visually-hidden">Buscar proyectos por tecnología o nombre</label>
-            <input
-              type="search"
-              id="project-search"
-              placeholder="Buscar tecnología (ESP32, Pluto, Docker, Kotlin, SPI...)"
-            />
-          </div>
-        </div>
-
-        <div class="projects-grid" id="projects-grid"></div>
-        <p id="projects-empty" class="section-subtitle" hidden>No hay proyectos que coincidan con el filtro aplicado.</p>
-      </div>
-    </section>
-
-    <!-- Competencias Técnicas -->
-    <section class="section section-alt" id="competencias">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">03 · Matriz de Competencias</span>
-          <h2>Stack Técnico Multidisciplinario</h2>
-          <p class="section-subtitle">
-            Dominio integrado desde el diseño de circuitos impresos y firmware determinista hasta la analítica, DevOps y gestión financiera.
-          </p>
-        </div>
-
-        <div class="toolbar no-print">
-          <div class="filter-group" id="skill-filters" role="group" aria-label="Filtrar competencias técnicas"></div>
-        </div>
-
-        <div class="skills-grid" id="skills-grid"></div>
-      </div>
-    </section>
-
-    <!-- Experiencia y Formación -->
-    <section class="section" id="trayectoria">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">04 · Trayectoria Profesional y Académica</span>
-          <h2>Experiencia Corporativa, Formación y Voluntariado</h2>
-        </div>
-
-        <div class="two-col-layout">
-          <div class="stack-col">
-            <h3 class="subsection-heading">Experiencia Laboral y Servicio Social</h3>
-            <div class="stack-col" id="experience-list"></div>
-          </div>
-          <div class="stack-col">
-            <h3 class="subsection-heading">Formación Académica</h3>
-            <div class="stack-col" id="education-list"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Idiomas, Distinciones y Certificaciones -->
-    <section class="section section-alt" id="certificaciones">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">05 · Validación Internacional, Pruebas de Estado y Educación Continua</span>
+      <!-- V. Idiomas, Pruebas de Estado y Tabla Responsiva de 21 Certificaciones -->
+      <section class="mono-section" id="credenciales" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección V · Acreditación y Pruebas de Estado</span>
           <h2>Idiomas, Distinciones Académicas y 21 Certificaciones</h2>
         </div>
 
-        <div class="two-col-layout">
-          <div class="stack-col">
-            <h3 class="subsection-heading">Idiomas Certificados</h3>
-            <div class="stack-col" id="languages-list"></div>
+        <div class="credentials-split">
+          <div>
+            <h3 class="sub-heading">Idiomas Certificados</h3>
+            <div id="languages-container"></div>
           </div>
-          <div class="stack-col">
-            <h3 class="subsection-heading">Pruebas de Estado y Distinciones</h3>
-            <div class="stack-col" id="distinctions-list"></div>
+          <div>
+            <h3 class="sub-heading">Pruebas de Estado y Distinciones</h3>
+            <div id="distinctions-container"></div>
           </div>
         </div>
 
-        <div class="certs-grid" id="certs-grid"></div>
-      </div>
-    </section>
+        <div tabindex="0" role="region" aria-labelledby="certs-caption" class="table-wrapper">
+          <table class="certs-table">
+            <caption id="certs-caption">Registro Completo de Educación Continua (21 Certificaciones Verificables)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Entidad</th>
+                <th scope="col">Área</th>
+                <th scope="col">Certificación</th>
+                <th scope="col">Detalle / Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="certs-tbody"></tbody>
+          </table>
+        </div>
+      </section>
 
-    <!-- Contacto -->
-    <section class="section no-print" id="contacto">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">06 · Contacto Directo</span>
-          <h2>Conectemos para Proyectos u Oportunidades</h2>
-          <p class="section-subtitle">
-            Disponibilidad inmediata para roles en sistemas embebidos, IoT, RF/telecomunicaciones, control o ingeniería de software.
+      <!-- VI. Contacto -->
+      <section class="mono-section no-print" id="contacto" tabindex="-1">
+        <div class="section-head">
+          <span class="section-index">Sección VI · Comunicación Directa</span>
+          <h2>Contacto y Disponibilidad</h2>
+          <p class="section-lead">
+            Disponible para vincularme en ingeniería de sistemas embebidos, IoT, RF/telecomunicaciones, automatización y
+            desarrollo de software.
           </p>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Canales Verificables</h3>
-            <div class="channel-list">
-              <a class="channel-item" href="mailto:camilomilo3000@gmail.com">
+          <div>
+            <div class="contact-ledger">
+              <div class="contact-row">
                 <span>Correo Electrónico</span>
-                <strong>camilomilo3000@gmail.com</strong>
-              </a>
-              <a class="channel-item" href="tel:+573046435801">
+                <a href="mailto:camilomilo3000@gmail.com">camilomilo3000@gmail.com</a>
+              </div>
+              <div class="contact-row">
                 <span>Teléfono / WhatsApp</span>
-                <strong>+57 304 643 5801</strong>
-              </a>
-              <a class="channel-item" href="https://github.com/CCemons" target="_blank" rel="noopener noreferrer">
-                <span>Repositorios de Ingeniería</span>
-                <strong>github.com/CCemons</strong>
-              </a>
-              <a class="channel-item" href="https://www.linkedin.com/in/camilocastanedapolo/" target="_blank" rel="noopener noreferrer">
-                <span>Perfil Profesional</span>
-                <strong>linkedin.com/in/camilocastanedapolo</strong>
-              </a>
+                <a href="tel:+573046435801">+57 304 643 5801</a>
+              </div>
+              <div class="contact-row">
+                <span>GitHub</span>
+                <a href="https://github.com/CCemons" target="_blank" rel="noopener noreferrer">github.com/CCemons &#8599;</a>
+              </div>
+              <div class="contact-row">
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/camilocastanedapolo/" target="_blank" rel="noopener noreferrer">linkedin.com/in/camilocastanedapolo &#8599;</a>
+              </div>
             </div>
-            <div class="copy-row">
-              <button type="button" class="btn btn-outline btn-sm" id="copy-email-btn">Copiar Correo</button>
-              <button type="button" class="btn btn-outline btn-sm" id="copy-phone-btn">Copiar Teléfono</button>
+            <div class="contact-copy-actions">
+              <button type="button" class="ctrl-btn" id="copy-email-btn">Copiar Correo</button>
+              <button type="button" class="ctrl-btn" id="copy-phone-btn">Copiar Teléfono</button>
             </div>
           </div>
 
-          <form class="contact-card form-grid" id="contact-form" novalidate>
+          <form class="editorial-form" id="contact-form" novalidate>
             <div class="form-row-2">
               <div class="field">
-                <label for="contact-name">Tu Nombre</label>
+                <label for="contact-name">Nombre Completo</label>
                 <span id="name-hint" class="field-hint">Mínimo 2 caracteres</span>
                 <input
                   type="text"
@@ -415,12 +479,12 @@
                   data-error="name-error"
                 />
                 <div id="name-error" class="error-msg">
-                  <span role="img" aria-label="Error">⚠</span> Ingresa tu nombre (al menos 2 caracteres).
+                  <span role="img" aria-label="Error">!</span> Ingresa tu nombre (al menos 2 caracteres).
                 </div>
               </div>
 
               <div class="field">
-                <label for="contact-email">Tu Correo Electrónico</label>
+                <label for="contact-email">Correo Electrónico</label>
                 <span id="email-hint" class="field-hint">Formato: nombre@empresa.com</span>
                 <input
                   type="email"
@@ -433,7 +497,7 @@
                   data-error="email-error"
                 />
                 <div id="email-error" class="error-msg">
-                  <span role="img" aria-label="Error">⚠</span> Ingresa un correo electrónico válido.
+                  <span role="img" aria-label="Error">!</span> Ingresa un correo electrónico válido.
                 </div>
               </div>
             </div>
@@ -447,92 +511,48 @@
                 name="subject"
                 required
                 minlength="4"
-                placeholder="Oportunidad en Embebidos / RF / Software"
+                placeholder="Vacante / Proyecto en Embebidos, RF o Software"
                 aria-describedby="subject-hint"
                 data-error="subject-error"
               />
               <div id="subject-error" class="error-msg">
-                <span role="img" aria-label="Error">⚠</span> Escribe un asunto de al menos 4 caracteres.
+                <span role="img" aria-label="Error">!</span> Escribe un asunto de al menos 4 caracteres.
               </div>
             </div>
 
             <div class="field">
               <label for="contact-message">Mensaje</label>
-              <span id="message-hint" class="field-hint">Describe el proyecto, vacante o consulta (mín. 10 caracteres)</span>
+              <span id="message-hint" class="field-hint">Mínimo 10 caracteres</span>
               <textarea
                 id="contact-message"
                 name="message"
                 required
                 minlength="10"
-                placeholder="Cuéntame sobre el proyecto o reto técnico..."
+                placeholder="Describe brevemente el proyecto u oportunidad..."
                 aria-describedby="message-hint"
                 data-error="message-error"
               ></textarea>
               <div id="message-error" class="error-msg">
-                <span role="img" aria-label="Error">⚠</span> El mensaje debe tener al menos 10 caracteres.
+                <span role="img" aria-label="Error">!</span> El mensaje debe tener al menos 10 caracteres.
               </div>
             </div>
 
             <div>
-              <button type="submit" class="btn btn-primary">Preparar Mensaje en Correo</button>
+              <button type="submit" class="ctrl-btn is-solid">Preparar Correo</button>
               <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
             </div>
           </form>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 
-  <footer class="site-footer no-print">
-    <div class="container footer-inner">
-      <p>&copy; <span id="footer-year">2026</span> <strong>Camilo Andrés Castañeda Polo</strong> · Ingeniero Electrónico (USCO).</p>
-      <p>HTML5 Semántico, CSS Moderno y JavaScript ES Modules · Sin dependencias externas · GitHub Pages.</p>
+  <footer class="colophon no-print">
+    <div class="frame colophon-inner">
+      <span>CAMILO ANDRÉS CASTAÑEDA POLO · <span id="footer-year">2026</span> · NEIVA, HUILA</span>
+      <span>HTML5 SEMÁNTICO · CSS SUIZO/INDUSTRIAL · ZERO DEPENDENCIES</span>
     </div>
   </footer>
-
-  <!-- Dialog nativo con closedby="any" (sin role="dialog" ni aria-modal redundantes) -->
-  <dialog id="project-dialog" closedby="any" aria-labelledby="dialog-title">
-    <div class="dialog-inner">
-      <div class="dialog-header">
-        <div>
-          <span class="badge-category" id="dialog-category"></span>
-          <h1 id="dialog-title"></h1>
-        </div>
-        <button type="button" class="btn-icon" id="dialog-close-btn" aria-label="Cerrar detalle del proyecto" autofocus>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-            <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <p id="dialog-summary" class="project-summary"></p>
-
-      <div class="dialog-section">
-        <h2>Arquitectura del Sistema</h2>
-        <p id="dialog-architecture" class="dialog-arch"></p>
-      </div>
-
-      <div class="dialog-section">
-        <h2>Simulación Interactiva</h2>
-        <div class="canvas-box">
-          <canvas id="dialog-canvas" width="640" height="190" aria-label="Visualización simulada del sistema"></canvas>
-        </div>
-        <pre id="dialog-console" class="readout-bar" aria-live="off"></pre>
-      </div>
-
-      <div class="dialog-section">
-        <h2>Aspectos Técnicos Destacados</h2>
-        <ul id="dialog-metrics" class="bullet-list"></ul>
-      </div>
-
-      <div class="dialog-footer">
-        <a href="#" id="dialog-secondary-link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" hidden></a>
-        <a href="#" id="dialog-repo-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          Abrir Repositorio en GitHub
-        </a>
-      </div>
-    </div>
-  </dialog>
 
   <div class="toast no-print" id="toast" role="status" aria-live="polite"></div>
 
